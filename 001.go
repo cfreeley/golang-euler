@@ -11,9 +11,7 @@ import (
 )
 
 func main() {
-	fmt.Println("expected:", 5050, "actual:", GaussSum(100))
-	fmt.Println("expected:", 23, "actual:", ThreeOrFiveSum(10))
-	fmt.Println("expected:", 5050, "actual:", ThreeOrFiveSum(1000))
+	fmt.Println(ThreeOrFiveSum(1000))
 }
 
 /*
@@ -35,7 +33,7 @@ func GaussSum (n int) int {
 // Which means the answer is the sums of the 3s and the 5s, MINUS the sums of the 15s
 // (because 15 is a multiple of both, we would otherwise double count the 15s)
 func ThreeOrFiveSum (cap int) int {
-	cap-- // Because
+	cap-- // Because the cap is not included in the range
 	threes := GaussSum(cap/3) * 3
 	fives := GaussSum(cap / 5) * 5
 	fifteens := GaussSum(cap / 15) * 15
