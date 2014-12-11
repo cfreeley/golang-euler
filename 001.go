@@ -6,12 +6,8 @@ It only needs to be in one file in the package to show up in the godoc.)
 */
 package main
 
-import (
-	"fmt"
-)
-
-func main() {
-	fmt.Println(ThreeOrFiveSum(1000))
+func P1() int {
+	return ThreeOrFiveSum(1000)
 }
 
 /*
