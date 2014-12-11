@@ -7,7 +7,7 @@ Use them to see Go in action, or get a gist of programming fundamentals in gener
 
 Feel more than free to add your own solutions! 
 
-*** Conventions
+***Conventions
 
 Since this is meant to be a collection of solutions, I want finding or running a specific problem
 to be as simple as possible. 
@@ -25,7 +25,7 @@ the problem.
 
 Feel free to discuss these or suggest your own guidelines.
 
-*** Running
+***Running
 
 The solutions are meant to be run through the command "go test". 
 Go will automatically find the tester and run each test method.
