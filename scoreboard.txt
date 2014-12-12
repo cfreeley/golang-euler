@@ -1,0 +1,8 @@
+PASS
+Benchmark1	10000000	       252 ns/op
+Benchmark2	 5000000	       425 ns/op
+Benchmark3	   10000	    177951 ns/op
+Benchmark4	    1000	   1527077 ns/op
+Benchmark5	       5	 248165908 ns/op
+Benchmark92	       1	3353458810 ns/op
+ok  	_/Users/Admin/Desktop/Github/go/src/golang-euler	17.274s
