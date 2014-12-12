@@ -18,6 +18,13 @@ func Test2 (t *testing.T) {
 	CheckExpectInts(P2(), 4613732, t)
 }
 
+func Test3 (t *testing.T) {
+	if IsPrime(927) || !IsPrime(103) {
+		t.Error("IsPrime(927) =", IsPrime(927), "; IsPrime(103)", IsPrime(103))
+	}
+	CheckExpectInts(P3(), 6857, t)
+}
+
 func Test4 (t *testing.T) {
 	if !IsPalindromeNumber(47574) || IsPalindromeNumber(4454) {
 		t.Error("IsPalindromeNumber(47574) =", IsPalindromeNumber(47574), 
