@@ -35,10 +35,17 @@ func Test4 (t *testing.T) {
 	CheckExpectInts(P4(), 906609, t)
 }
 
-// Current slowest solution!
+// Second slowest solution!
 func Test5 (t *testing.T) {
 	CheckExpectInts(SmallestEvenlyDivisibleBy(10), 2520, t)
 	CheckExpectInts(P5(), 232792560, t)
+}
+
+// Current slowest solution!
+func Test92(t *testing.T) {
+	CheckExpectInts(SquareDigitSum(16), 37, t)
+	CheckExpectInts(SquareDigitChain(145, make([]int, 10000000)), 89, t)
+	CheckExpectInts(P92(), 8581146, t)
 }
 
 // Go doesn't like generics or overloading, so making specific
