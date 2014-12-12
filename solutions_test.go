@@ -35,6 +35,12 @@ func Test4 (t *testing.T) {
 	CheckExpectInts(P4(), 906609, t)
 }
 
+// Current slowest solution!
+func Test5 (t *testing.T) {
+	CheckExpectInts(SmallestEvenlyDivisibleBy(10), 2520, t)
+	CheckExpectInts(P5(), 232792560, t)
+}
+
 // Go doesn't like generics or overloading, so making specific
 // equality testers
 
