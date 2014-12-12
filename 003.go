@@ -10,6 +10,7 @@ func P3() int {
 	return HighestPrimeFactor(600851475143)
 }
 
+// Performs a prime factorization of start, keeping track of the highest prime
 func HighestPrimeFactor(start int) int {
 	max := 0
 	for i := 2; i <= start; i++ {
@@ -24,6 +25,7 @@ func HighestPrimeFactor(start int) int {
 	return max
 }
 
+// Iterates up to the prime looking for divisors, returns false if it finds any
 func IsPrime(n int) bool {
 	for i := 2; i < n; i++ {
 		if n % i == 0 {

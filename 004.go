@@ -26,11 +26,11 @@ can just search through the numbers between them.
 // Finds the highest palindrome product backwards from the given start
 func palindromeProductSearchAndDestroy(start int) int {
 	row, col, pal, product, max := 0, 0, 0, start * start, start * start
-	for pal < max {
+	for pal < max { // If we have a pal greater than any products we're gonna find, we're done
 		if IsPalindromeNumber(product) {
 			pal = product
 		}
-		if row > col || product < pal {
+		if row > col || product < pal { // Moves to the next column if this one can be skipped
 			row = 0
 			col++
 			max = (start - row) * (start - col)
@@ -45,8 +45,8 @@ func palindromeProductSearchAndDestroy(start int) int {
 // IsPalindromeNumber returns true if the number is a 'palindrome'
 // invariant: n >= 0
 func IsPalindromeNumber(n int) bool {
-	//fmt.Println(n)
 	slice := NumberSlice(n)
+	// Iterates forward and backwards through the slice to find any discrepancies 
 	for i, last := 0, len(slice) - 1; i <= len(slice) / 2; i++ {
 		if slice[i] != slice[last-i] {
 			return false
@@ -61,5 +61,5 @@ func NumberSlice(n int) []int {
 	if n < 10 {
 		return []int{n}
 	}
-	return append(NumberSlice(n / 10), n % 10)
+	return append(NumberSlice(n / 10), n % 10) // % 10 to get the 'one's place
 }

@@ -97,6 +97,8 @@ func Benchmark92(b *testing.B) {
     }
 }
 
+//-----------------------------------------------------------------------------
+
 // Go doesn't like generics or overloading, so making specific
 // equality testers
 
