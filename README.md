@@ -22,13 +22,17 @@ as neccessary). This is so Github will organize the solutions numerically
 4. Test functions have the name TestX, with X being the problem number (in the style of #2). Each function should have
 a test case for the solution function, but is encouraged to also have tests for any other utility functions used when solving
 the problem.
+5. Under the test should be a [Benchmark Test](http://golang.org/pkg/testing/#hdr-Benchmarks)
+with the name BenchmarkX, which runs the equivalent PX().  
+6. Please add a comment at the top of the solution file stating the problem summary so people don't have to look it up.
 
 Feel free to discuss these or suggest your own guidelines.
 
 ### Running
 
 The solutions are meant to be run through the command "go test". 
-Go will automatically find the tester and run each test method.
+Go will automatically find the tester and run each test method. If you add the flag "-bench ." then Go will give you a report
+of all the benchmark times.
 
 To run an individual solution yourself, I reccomend going to [Go Playground](https://play.golang.org/),
 adding the code of the solution to there, as well as a main function where you can Println whatever you're looking to see.

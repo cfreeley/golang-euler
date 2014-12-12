@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+//-----------------------------------------------------------------------------
+
 func Test1 (t *testing.T) {
 	CheckExpectInts(GaussSum(100), 5050,t)
 	CheckExpectInts(ThreeOrFiveSum(10), 23,t)
@@ -16,6 +18,8 @@ func Benchmark1(b *testing.B) {
         fmt.Sprintln(P1())
     }
 }
+
+//-----------------------------------------------------------------------------
 
 func Test2 (t *testing.T) {
 	if IsEven(3) || !IsEven(4) {
@@ -31,6 +35,8 @@ func Benchmark2(b *testing.B) {
     }
 }
 
+//-----------------------------------------------------------------------------
+
 func Test3 (t *testing.T) {
 	if IsPrime(927) || !IsPrime(103) {
 		t.Error("IsPrime(927) =", IsPrime(927), "; IsPrime(103)", IsPrime(103))
@@ -43,6 +49,8 @@ func Benchmark3(b *testing.B) {
         fmt.Sprintln(P3())
     }
 }
+
+//-----------------------------------------------------------------------------
 
 func Test4 (t *testing.T) {
 	if !IsPalindromeNumber(47574) || IsPalindromeNumber(4454) {
@@ -60,6 +68,8 @@ func Benchmark4(b *testing.B) {
     }
 }
 
+//-----------------------------------------------------------------------------
+
 // Second slowest solution!
 func Test5 (t *testing.T) {
 	CheckExpectInts(SmallestEvenlyDivisibleBy(10), 2520, t)
@@ -72,7 +82,9 @@ func Benchmark5(b *testing.B) {
     }
 }
 
-// Current slowest solution!
+//-----------------------------------------------------------------------------
+
+// Current slowest solution! (by a long shot)
 func Test92(t *testing.T) {
 	CheckExpectInts(SquareDigitSum(16), 37, t)
 	CheckExpectInts(SquareDigitChain(145, make([]int, 10000000)), 89, t)
