@@ -18,6 +18,16 @@ func Test2 (t *testing.T) {
 	CheckExpectInts(P2(), 4613732, t)
 }
 
+func Test4 (t *testing.T) {
+	if !IsPalindromeNumber(47574) || IsPalindromeNumber(4454) {
+		t.Error("IsPalindromeNumber(47574) =", IsPalindromeNumber(47574), 
+			"; IsPalindromeNumber(4454) =", IsPalindromeNumber(4454))
+	}
+	CheckExpectInts(NumberSlice(1234)[0], 1, t)
+	CheckExpectInts(NumberSlice(1234)[2], 3, t)
+	CheckExpectInts(P4(), 906609, t)
+}
+
 // Go doesn't like generics or overloading, so making specific
 // equality testers
 
