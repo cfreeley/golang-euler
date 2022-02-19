@@ -15,8 +15,10 @@ What is most amazing is that EVERY starting number will eventually arrive at 1 o
 How many starting numbers below ten million will arrive at 89?
 */
 
+var cachesize = 9*9*7+1
+
 func P92() int {
-	arr, count := make([]int, 10000000), 0
+	arr, count := make([]int, cachesize), 0
 	for i := 1; i < 10000000; i++ {
 		if SquareDigitChain(i, arr) == 89 {
 			count++
@@ -30,12 +32,14 @@ func SquareDigitChain(n int, arr []int) (endpoint int) {
 	if n == 1 || n == 89 {
 		return n
 	} 
-	if arr[n] != 0 {
+	if n < cachesize && arr[n] != 0 {
 		return arr[n]
 	}
 	sum := SquareDigitSum(n)
 	endpoint = SquareDigitChain(sum, arr)
-	arr[n] = endpoint
+	if n < cachesize {
+		arr[n] = endpoint
+	}
 	return
 }
 
